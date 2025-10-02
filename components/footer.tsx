@@ -1,0 +1,118 @@
+"use client"
+
+import { Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
+
+export function Footer() {
+  return (
+    <footer className="bg-primary text-primary-foreground py-12">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Logo and Description */}
+            <div>
+              <div className="mb-4 bg-accent p-3 rounded-lg inline-block">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logoDiniz-LdBN3jF0xgTVaxObzBizS4JT3iArdq.jpg"
+                  alt="Diniz Assessoria Contábil"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </div>
+              <p className="text-primary-foreground/80 leading-relaxed">
+                Há mais de 15 anos oferecendo soluções contábeis para empresas e profissionais.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-bold text-lg mb-4">Links Rápidos</h3>
+              <ul className="space-y-2">
+                <li>
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById("inicio")
+                      if (element) element.scrollIntoView({ behavior: "smooth" })
+                    }}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    Início
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById("sobre")
+                      if (element) element.scrollIntoView({ behavior: "smooth" })
+                    }}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    Sobre
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById("servicos")
+                      if (element) element.scrollIntoView({ behavior: "smooth" })
+                    }}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    Serviços
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById("contato")
+                      if (element) element.scrollIntoView({ behavior: "smooth" })
+                    }}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    Contato
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="font-bold text-lg mb-4">Contato</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Phone size={18} className="mt-1 flex-shrink-0" />
+                  <a
+                    href="tel:+556333227900"
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    (63) 3322-7900
+                  </a>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Mail size={18} className="mt-1 flex-shrink-0" />
+                  <a
+                    href="mailto:contato@dinizcontabilidade.com"
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors break-all"
+                  >
+                    contato@dinizcontabilidade.com
+                  </a>
+                </li>
+                <li className="flex items-start gap-2">
+                  <MapPin size={18} className="mt-1 flex-shrink-0" />
+                  <span className="text-primary-foreground/80">Q. 103 Sul Av Juscelino K, 145 - Arso, Palmas - TO</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-primary-foreground/20 pt-8 text-center">
+            <p className="text-primary-foreground/80">
+              © {new Date().getFullYear()} Diniz Assessoria Contábil. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
