@@ -25,8 +25,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm ${
+        isScrolled ? "shadow-sm" : ""
       }`}
     >
       <div className="container mx-auto px-4">
@@ -63,6 +63,13 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Serviços
+            </Link>
+            <Link
+              href="/noticias"
+              onClick={handleLinkClick}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Notícias
             </Link>
             <Link
               href="/contato"
@@ -108,6 +115,13 @@ export function Header() {
                 className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
                 Serviços
+              </Link>
+              <Link
+                href="/noticias"
+                onClick={handleLinkClick}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+              >
+                Notícias
               </Link>
               <Link
                 href="/contato"
