@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server"
 
-export const runtime = "edge"
-
 const NEWS_API_KEY = process.env.NEWS_API_KEY
 const KEYWORDS = ["ICMS", "legislação fiscal", "MEI", "reforma tributária", "IRPJ", "IRPF", "ISS"]
 
@@ -21,9 +19,7 @@ export async function GET() {
 
     const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=pt&from=${fromDate}&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
 
-    const response = await fetch(url, {
-      next: { revalidate: 86400 }, // Cache por 24 horas (86400 segundos)
-    })
+    const response = await fetch(url)
 
     if (!response.ok) {
       throw new Error("Erro ao buscar notícias")
