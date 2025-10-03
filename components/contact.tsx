@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -19,7 +19,6 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // WhatsApp message
     const message = `Olá! Meu nome é ${formData.name}. ${formData.message}`
     const whatsappUrl = `https://wa.me/556333227900?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
@@ -102,6 +101,32 @@ export function Contact() {
                       <br />
                       Palmas - TO, 77015-012
                     </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-foreground mb-4">Redes Sociais</h3>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://www.facebook.com/dinizassessoriacontabil/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="text-primary" size={24} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/diniz.contabil/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="text-primary" size={24} />
+                    </a>
                   </div>
                 </CardContent>
               </Card>

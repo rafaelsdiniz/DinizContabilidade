@@ -18,12 +18,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsMobileMenuOpen(false)
-    }
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    setIsMobileMenuOpen(false)
   }
 
   return (
@@ -34,7 +31,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
+          <Link href="/" onClick={handleLinkClick} className="flex items-center">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logoDiniz-LdBN3jF0xgTVaxObzBizS4JT3iArdq.jpg"
               alt="Diniz Assessoria Contábil"
@@ -46,35 +43,38 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("inicio")}
+            <Link
+              href="/"
+              onClick={handleLinkClick}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Início
-            </button>
-            <button
-              onClick={() => scrollToSection("sobre")}
+            </Link>
+            <Link
+              href="/sobre"
+              onClick={handleLinkClick}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Sobre
-            </button>
-            <button
-              onClick={() => scrollToSection("servicos")}
+            </Link>
+            <Link
+              href="/servicos"
+              onClick={handleLinkClick}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Serviços
-            </button>
-            <button
-              onClick={() => scrollToSection("contato")}
+            </Link>
+            <Link
+              href="/contato"
+              onClick={handleLinkClick}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contato
-            </button>
-            <Button
-              onClick={() => scrollToSection("contato")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Fale Conosco
+            </Link>
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link href="/orcamento" onClick={handleLinkClick}>
+                Solicite seu Orçamento
+              </Link>
             </Button>
           </nav>
 
@@ -88,35 +88,38 @@ export function Header() {
         {isMobileMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("inicio")}
+              <Link
+                href="/"
+                onClick={handleLinkClick}
                 className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
                 Início
-              </button>
-              <button
-                onClick={() => scrollToSection("sobre")}
+              </Link>
+              <Link
+                href="/sobre"
+                onClick={handleLinkClick}
                 className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
                 Sobre
-              </button>
-              <button
-                onClick={() => scrollToSection("servicos")}
+              </Link>
+              <Link
+                href="/servicos"
+                onClick={handleLinkClick}
                 className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
                 Serviços
-              </button>
-              <button
-                onClick={() => scrollToSection("contato")}
+              </Link>
+              <Link
+                href="/contato"
+                onClick={handleLinkClick}
                 className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
                 Contato
-              </button>
-              <Button
-                onClick={() => scrollToSection("contato")}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
-              >
-                Fale Conosco
+              </Link>
+              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                <Link href="/orcamento" onClick={handleLinkClick}>
+                  Solicite seu Orçamento
+                </Link>
               </Button>
             </div>
           </nav>

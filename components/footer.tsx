@@ -1,7 +1,8 @@
 "use client"
 
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -20,9 +21,29 @@ export function Footer() {
                   className="h-10 w-auto"
                 />
               </div>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed mb-4">
                 Há mais de 15 anos oferecendo soluções contábeis para empresas e profissionais.
               </p>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.facebook.com/dinizassessoriacontabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/diniz.contabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+              </div>
             </div>
 
             {/* Quick Links */}
@@ -30,48 +51,41 @@ export function Footer() {
               <h3 className="font-bold text-lg mb-4">Links Rápidos</h3>
               <ul className="space-y-2">
                 <li>
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById("inicio")
-                      if (element) element.scrollIntoView({ behavior: "smooth" })
-                    }}
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-                  >
+                  <Link href="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     Início
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById("sobre")
-                      if (element) element.scrollIntoView({ behavior: "smooth" })
-                    }}
+                  <Link
+                    href="/sobre"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     Sobre
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById("servicos")
-                      if (element) element.scrollIntoView({ behavior: "smooth" })
-                    }}
+                  <Link
+                    href="/servicos"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     Serviços
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById("contato")
-                      if (element) element.scrollIntoView({ behavior: "smooth" })
-                    }}
+                  <Link
+                    href="/contato"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     Contato
-                  </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/orcamento"
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    Solicite seu Orçamento
+                  </Link>
                 </li>
               </ul>
             </div>

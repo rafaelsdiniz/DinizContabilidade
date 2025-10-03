@@ -1,8 +1,8 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Services } from "@/components/services"
-import { Contact } from "@/components/contact"
+import { WhyChooseUs } from "@/components/why-choose-us"
+import { Reviews } from "@/components/reviews"
+import { FAQ } from "@/components/faq"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -11,9 +11,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <Contact />
+        <WhyChooseUs />
+        <Reviews />
+        <FAQ />
       </main>
       <Footer />
     </div>

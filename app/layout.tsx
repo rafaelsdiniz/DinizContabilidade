@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Diniz Assessoria Contábil - Soluções Contábeis em Palmas - TO",
   description:
-    "Há mais de 20 anos oferecendo soluções contábeis para empresas e profissionais em Palmas - TO. Abertura de empresas, contabilidade, consultoria tributária e mais.",
+    "Há mais de 15 anos oferecendo soluções contábeis para empresas e profissionais em Palmas - TO. Abertura de empresas, contabilidade, consultoria tributária e mais.",
   generator: "v0.app",
 }
 

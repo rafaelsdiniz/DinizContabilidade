@@ -21,7 +21,7 @@ export function About() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                 <Award className="text-primary" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">10+ Anos</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">15+ Anos</h3>
               <p className="text-muted-foreground">De experiência no mercado contábil</p>
             </div>
 
