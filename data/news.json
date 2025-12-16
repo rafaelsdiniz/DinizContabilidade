@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Receita Federal altera prazo para declaração do Imposto de Renda 2024",
+    "description": "A Receita Federal publicou instrução normativa alterando o prazo final para entrega da declaração do IRPF 2024, trazendo novas regras para contribuintes.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-03-15T10:30:00Z",
+    "source": {
+      "name": "Receita Federal"
+    }
+  },
+  {
+    "title": "MEI: Novas regras de faturamento entram em vigor",
+    "description": "Microempreendedores Individuais devem ficar atentos às novas regras de faturamento que passam a valer a partir deste mês.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-03-10T14:00:00Z",
+    "source": {
+      "name": "Portal do Empreendedor"
+    }
+  },
+  {
+    "title": "Reforma Tributária: Entenda as mudanças no ICMS",
+    "description": "A reforma tributária traz alterações significativas na cobrança do ICMS. Saiba como isso impacta sua empresa.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-03-08T09:15:00Z",
+    "source": {
+      "name": "Portal Tributário"
+    }
+  },
+  {
+    "title": "ISS: Municípios revisam alíquotas para 2024",
+    "description": "Diversos municípios brasileiros estão revisando as alíquotas do ISS. Confira se sua cidade está na lista.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-03-05T16:45:00Z",
+    "source": {
+      "name": "Confederação Nacional de Municípios"
+    }
+  },
+  {
+    "title": "IRPJ e CSLL: Governo anuncia mudanças nas alíquotas",
+    "description": "Ministério da Fazenda divulga proposta de alteração nas alíquotas do IRPJ e CSLL para empresas do Lucro Real.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-03-01T11:20:00Z",
+    "source": {
+      "name": "Ministério da Fazenda"
+    }
+  },
+  {
+    "title": "Simples Nacional: Prazo para opção termina em 31 de janeiro",
+    "description": "Empresas que desejam optar pelo Simples Nacional têm até o final de janeiro para fazer a solicitação.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-01-25T08:00:00Z",
+    "source": {
+      "name": "Sebrae"
+    }
+  },
+  {
+    "title": "eSocial: Nova fase de implantação começa em abril",
+    "description": "A próxima fase do eSocial traz novas obrigações para empresas de todos os portes. Prepare-se com antecedência.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-02-20T13:30:00Z",
+    "source": {
+      "name": "Governo Federal"
+    }
+  },
+  {
+    "title": "NFe: Receita amplia exigências de validação fiscal",
+    "description": "Novas regras de validação para emissão de Nota Fiscal Eletrônica entram em vigor. Saiba o que muda.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-02-15T10:00:00Z",
+    "source": {
+      "name": "Sefaz"
+    }
+  },
+  {
+    "title": "Legislação trabalhista: Novas regras para home office",
+    "description": "TST publica novas diretrizes sobre regime de trabalho remoto e seus impactos na folha de pagamento.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-02-10T15:45:00Z",
+    "source": {
+      "name": "TST"
+    }
+  },
+  {
+    "title": "Prazo para regularização de débitos fiscais é prorrogado",
+    "description": "Receita Federal prorroga prazo do programa de parcelamento especial de débitos tributários.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-02-05T09:30:00Z",
+    "source": {
+      "name": "Receita Federal"
+    }
+  },
+  {
+    "title": "INSS: Novas alíquotas de contribuição previdenciária",
+    "description": "Governo Federal anuncia reajuste nas alíquotas de contribuição previdenciária para 2024.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-01-30T12:00:00Z",
+    "source": {
+      "name": "Ministério da Previdência"
+    }
+  },
+  {
+    "title": "Certificado Digital: Entenda a obrigatoriedade para empresas",
+    "description": "Saiba quais empresas são obrigadas a ter certificado digital e como obter o seu.",
+    "url": "#",
+    "urlToImage": "/placeholder.svg?height=400&width=600",
+    "publishedAt": "2024-01-20T14:15:00Z",
+    "source": {
+      "name": "ICP-Brasil"
+    }
+  }
+]
