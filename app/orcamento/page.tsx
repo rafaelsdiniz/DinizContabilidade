@@ -76,7 +76,7 @@ export default function OrcamentoPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-32 pb-24 bg-background">
+      <main className="py-24 bg-accent">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
