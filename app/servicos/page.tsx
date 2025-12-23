@@ -9,7 +9,6 @@ export default function ServicosPage() {
       <main className="pt-20">
         <Services />
       </main>
-      <Footer />
     </div>
   )
 }

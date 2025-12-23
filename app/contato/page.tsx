@@ -9,7 +9,6 @@ export default function ContatoPage() {
       <main className="pt-20">
         <Contact />
       </main>
-      <Footer />
     </div>
   )
 }

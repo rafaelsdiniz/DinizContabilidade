@@ -6,6 +6,14 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const navItems = [
+  { label: "Início", href: "/" },
+  { label: "Sobre", href: "/sobre" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Notícias", href: "/noticias" },
+  { label: "Contato", href: "/contato" },
+]
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -25,12 +33,16 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm ${
-        isScrolled ? "shadow-sm" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+
+          {/* LOGO */}
           <Link href="/" onClick={handleLinkClick} className="flex items-center">
             <Image
               src="/logo-diniz.png"
@@ -41,96 +53,70 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
-              onClick={handleLinkClick}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={handleLinkClick}
+                className="
+                  relative font-medium text-foreground
+                  transition-all duration-300
+                  hover:text-primary
+                  after:absolute after:left-0 after:-bottom-1
+                  after:h-0.5 after:w-0 after:bg-primary
+                  after:transition-all after:duration-300
+                  hover:after:w-full
+                  hover:-translate-y-[1px]
+                "
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            <Button
+              asChild
+              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-[1.03]"
             >
-              Início
-            </Link>
-            <Link
-              href="/sobre"
-              onClick={handleLinkClick}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Sobre
-            </Link>
-            <Link
-              href="/servicos"
-              onClick={handleLinkClick}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Serviços
-            </Link>
-            <Link
-              href="/noticias"
-              onClick={handleLinkClick}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Notícias
-            </Link>
-            <Link
-              href="/contato"
-              onClick={handleLinkClick}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Contato
-            </Link>
-            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="/orcamento" onClick={handleLinkClick}>
                 Solicite seu Orçamento
               </Link>
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {/* MOBILE BUTTON */}
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* MOBILE MENU */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
-              <Link
-                href="/"
-                onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+          <nav className="md:hidden py-6 border-t border-border bg-background">
+            <div className="flex flex-col gap-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={handleLinkClick}
+                  className="
+                    text-foreground font-medium
+                    transition-all duration-300
+                    hover:text-primary hover:translate-x-1
+                  "
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <Button
+                asChild
+                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
               >
-                Início
-              </Link>
-              <Link
-                href="/sobre"
-                onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
-              >
-                Sobre
-              </Link>
-              <Link
-                href="/servicos"
-                onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
-              >
-                Serviços
-              </Link>
-              <Link
-                href="/noticias"
-                onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
-              >
-                Notícias
-              </Link>
-              <Link
-                href="/contato"
-                onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
-              >
-                Contato
-              </Link>
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
                 <Link href="/orcamento" onClick={handleLinkClick}>
                   Solicite seu Orçamento
                 </Link>

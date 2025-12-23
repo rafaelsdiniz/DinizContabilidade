@@ -17,7 +17,6 @@ export default function Home() {
         <Reviews />
         <ContactCTA />
       </main>
-      <Footer />
     </div>
   )
 }

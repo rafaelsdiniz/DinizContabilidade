@@ -1,115 +1,70 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
-  const [isMobile, setIsMobile] = useState(false)
-  const [isTablet, setIsTablet] = useState(false)
-  const [isDesktop, setIsDesktop] = useState(false)
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      const width = window.innerWidth
-      setIsMobile(width < 768)     // Celular: < 768px
-      setIsTablet(width >= 768 && width < 1024)  // Tablet: 768px - 1024px
-      setIsDesktop(width >= 1024 && width < 1440) // Notebook: 1024px - 1440px
-    }
-    
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-    
-    return () => window.removeEventListener('resize', checkScreenSize)
-  }, [])
-
-  // Tamanhos de fonte por dispositivo
-  const titleSize = isMobile ? "text-3xl" : isTablet ? "text-4xl" : isDesktop ? "text-5xl" : "text-6xl"
-  const subtitleSize = isMobile ? "text-2xl" : isTablet ? "text-3xl" : isDesktop ? "text-4xl" : "text-5xl"
-  const badgeSize = isMobile ? "text-xs" : isTablet ? "text-xs" : "text-sm"
-
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden pt-16 md:pt-20">
+    <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden pt-24">
+
       {/* Vídeo de fundo */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0">
         <video
           autoPlay
           loop
           muted
           playsInline
+          preload="none"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        {/* Overlay gradiente */}
+
         <div className="absolute inset-0 bg-gradient-to-r from-accent/95 via-accent/85 to-accent/70" />
       </div>
 
-      {/* Conteúdo principal com mais espaço no topo */}
-      <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12">
-        <div className="max-w-xl sm:max-w-2xl lg:max-w-3xl">
-          {/* Badge - menor e com mais espaçamento no topo */}
-          <div className={`inline-flex items-center gap-1.5 mb-4 sm:mb-6 px-3 sm:px-3 py-1.5 sm:py-2 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20 ${badgeSize}`}>
-            <Sparkles size={12} className="text-primary flex-shrink-0" />
-            <span className="text-primary font-medium truncate">
-              Há mais de 15 anos transformando negócios
+      {/* Conteúdo */}
+      <div className="container relative z-10 px-6 sm:px-10 lg:px-16">
+        <div className="max-w-2xl lg:ml-20">
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 mb-10 px-5 py-2 bg-primary/10 rounded-full backdrop-blur border border-primary/20 text-xs sm:text-sm">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-primary font-medium">
+              Mais de 15 anos de experiência
             </span>
           </div>
 
-          {/* Título principal */}
-          <h1 className={`${titleSize} font-bold text-foreground mb-3 sm:mb-4 leading-tight`}>
-            Sua contabilidade
+          {/* Headline */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+            Contabilidade
           </h1>
 
-          {/* Subtítulo */}
-          <h2 className={`${subtitleSize} font-bold text-primary mb-4 sm:mb-6 leading-tight`}>
-            em outro nível
+          <h2 className="mt-5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary">
+            que impulsiona negócios
           </h2>
 
           {/* Descrição */}
-          <p className="text-base sm:text-lg md:text-xl text-foreground/95 mb-6 sm:mb-8 max-w-lg leading-relaxed">
-            Assessoria contábil completa que transforma números em estratégias para o crescimento sustentável do seu negócio.
+          <p className="mt-10 text-base sm:text-lg lg:text-xl text-foreground/85 max-w-xl leading-relaxed">
+            Organização, segurança fiscal e decisões inteligentes para sua empresa crescer.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
-            <Button 
-              size={isMobile ? "default" : "lg"} 
-              asChild 
-              className="text-sm sm:text-base px-4 sm:px-6 py-4 sm:py-5 h-auto w-full sm:w-auto"
-            >
-              <Link href="/contato" className="flex items-center justify-center gap-2">
-                Falar com especialista
-                <ArrowRight className="ml-1 sm:ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+          {/* CTAs */}
+          <div className="mt-14 flex flex-col sm:flex-row gap-5">
+            <Button size="lg" asChild>
+              <Link href="/contato" className="flex items-center gap-2">
+                Falar com um contador
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button 
-              size={isMobile ? "default" : "lg"} 
-              variant="outline" 
-              asChild 
-              className="text-sm sm:text-base px-4 sm:px-6 py-4 sm:py-5 h-auto w-full sm:w-auto border-2"
-            >
-              <Link href="/servicos" className="flex items-center justify-center">
+
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/servicos">
                 Ver serviços
               </Link>
             </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="flex flex-wrap gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-foreground/10">
-            <div className="text-foreground">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
-              <div className="text-xs sm:text-sm font-medium text-foreground/90">Anos de Experiência</div>
-            </div>
-            <div className="text-foreground">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">500+</div>
-              <div className="text-xs sm:text-sm font-medium text-foreground/90">Clientes Atendidos</div>
-            </div>
-            <div className="text-foreground">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">100%</div>
-              <div className="text-xs sm:text-sm font-medium text-foreground/90">Conformidade Fiscal</div>
-            </div>
           </div>
         </div>
       </div>
