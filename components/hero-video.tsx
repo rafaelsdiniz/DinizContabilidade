@@ -19,17 +19,18 @@ export function HeroVideo() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container mx-auto px-6 max-w-4xl text-white">
+      <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="container mx-auto px-6 max-w-4xl text-white text-center">
+
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Contabilidade estratégica para crescer com segurança
+            CONTABILIDADE ESTRATÉGICA PARA CRESCER COM SEGURANÇA
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-white/90">
             Especialistas em empresas, profissionais da saúde e prestadores de serviço.
           </p>
 
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex gap-4 justify-center">
             <a
               href="/orcamento"
               className="inline-flex items-center justify-center
@@ -51,6 +52,7 @@ export function HeroVideo() {
               Conheça os serviços
             </a>
           </div>
+
         </div>
       </div>
     </section>

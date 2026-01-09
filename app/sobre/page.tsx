@@ -1,4 +1,4 @@
-import { About } from "@/components/about"
+
 import { Equipe } from "@/components/equipe"
 import { Historia } from "@/components/historia"
 import { Valores } from "@/components/valores"

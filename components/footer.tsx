@@ -16,11 +16,11 @@ export function Footer() {
             <div>
               <div className="mb-6 inline-block">
                 <Image
-                  src="/Diniz_Logo_Final.png"
+                  src="/DINIZ15ANOS.png"
                   alt="Diniz Assessoria Contábil"
-                  width={150}
-                  height={50}
-                  className="h-9 w-auto"
+                  width={200}
+                  height={70}
+                  className="h-15 w-auto"
                 />
               </div>
 

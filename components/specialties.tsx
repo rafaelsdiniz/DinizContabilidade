@@ -13,6 +13,18 @@ export function Specialties() {
       description:
         "Transformamos dados contábeis em relatórios estratégicos para apoiar decisões assertivas e melhorar os resultados do negócio.",
     },
+        {
+      title: "Planejamento e Recuperação Tributária",
+      image: "/fiscal.webp",
+      description:
+        "Estratégias legais para reduzir a carga tributária e identificar créditos recuperáveis que geram ganhos financeiros.",
+    },
+    {
+      title: "Consultoria Empresarial e Financeira",
+      image: "/consultoria.jpg",
+      description:
+        "Apoio na gestão financeira, fluxo de caixa e organização de processos para crescimento sustentável.",
+    },
     {
       title: "Departamento Pessoal e Folha de Pagamento",
       image: "/folha.png",
@@ -24,18 +36,6 @@ export function Specialties() {
       image: "/imposto.jpeg",
       description:
         "Controle e cálculo preciso de tributos, buscando sempre a melhor opção dentro da legislação vigente.",
-    },
-    {
-      title: "Planejamento e Recuperação Tributária",
-      image: "/fiscal.webp",
-      description:
-        "Estratégias legais para reduzir a carga tributária e identificar créditos recuperáveis que geram ganhos financeiros.",
-    },
-    {
-      title: "Consultoria Empresarial e Financeira",
-      image: "/consultoria.jpg",
-      description:
-        "Apoio na gestão financeira, fluxo de caixa e organização de processos para crescimento sustentável.",
     },
     {
       title: "BPO Financeiro",

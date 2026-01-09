@@ -39,9 +39,9 @@ export function ContactCTA() {
               </Link>
             </Button>
 
-            <a href="tel:+556332153232">
+            <a href="tel:+556333227900">
               <Button variant="outline">
-                (63) 3215-3232
+                (63) 3322-7900
               </Button>
             </a>
           </div>
@@ -50,7 +50,7 @@ export function ContactCTA() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>(63) 3215-3232</span>
+              <span>(63) 3322-7900</span>
             </div>
 
             <div className="flex items-center gap-2">
