@@ -23,7 +23,7 @@ export function HeroVideo() {
         <div className="container mx-auto px-6 max-w-4xl text-white text-center">
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            CONTABILIDADE ESTRATÉGICA PARA CRESCER COM SEGURANÇA
+            Contabilidade Estratégica para Crescer com Segurança
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-white/90">
