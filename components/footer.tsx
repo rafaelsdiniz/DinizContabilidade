@@ -5,33 +5,33 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-14">
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
           {/* CONTEÚDO PRINCIPAL */}
-          <div className="grid md:grid-cols-2 gap-12 mb-10">
+          <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">
 
-            {/* LOGO COMPLETA */}
-            <div className="flex items-start">
+            {/* LOGO COMPLETA — ESQUERDA */}
+            <div className="flex justify-start">
               <Image
-                src="/logocompleta.png"
+                src="/logofinal.png"
                 alt="Diniz Assessoria Contábil"
-                width={700}
-                height={200}
-                className="h-60 w-auto object-contain"
+                width={900}
+                height={300}
+                className="h-78 w-auto object-contain"
                 priority
               />
             </div>
 
-            {/* CONTATO */}
-            <div>
+            {/* CONTATO — DIREITA */}
+            <div className="md:text-right">
               <h3 className="font-serif text-lg font-semibold mb-6">
                 Contato
               </h3>
 
               <ul className="space-y-4 text-primary-foreground/80">
-                <li className="flex items-start gap-3">
+                <li className="flex md:justify-end items-start gap-3">
                   <Phone size={16} className="mt-1 flex-shrink-0" />
                   <a
                     href="tel:+556333227900"
@@ -41,7 +41,7 @@ export function Footer() {
                   </a>
                 </li>
 
-                <li className="flex items-start gap-3">
+                <li className="flex md:justify-end items-start gap-3">
                   <Mail size={16} className="mt-1 flex-shrink-0" />
                   <a
                     href="mailto:contato@dinizcontabilidade.com"
@@ -51,7 +51,7 @@ export function Footer() {
                   </a>
                 </li>
 
-                <li className="flex items-start gap-3">
+                <li className="flex md:justify-end items-start gap-3">
                   <MapPin size={16} className="mt-1 flex-shrink-0" />
                   <span>
                     Q. 103 Sul Av. Juscelino K, 145 – Palmas / TO
@@ -60,7 +60,7 @@ export function Footer() {
               </ul>
 
               {/* REDES SOCIAIS */}
-              <div className="flex gap-3 mt-6">
+              <div className="flex md:justify-end gap-3 mt-6">
                 <a
                   href="https://www.facebook.com/dinizassessoriacontabil/"
                   target="_blank"
