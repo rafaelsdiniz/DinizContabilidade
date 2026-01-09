@@ -1,27 +1,26 @@
 "use client"
 
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
-import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
+    <footer
+      className="bg-primary text-primary-foreground py-20"
+      style={{
+        backgroundImage: "url('/logofinal.png')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left center",
+        backgroundSize: "auto 90%",
+      }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
 
           {/* CONTEÚDO PRINCIPAL */}
           <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">
 
-            {/* LOGO COMPLETA — ESQUERDA */}
-            <div className="flex justify-start">
-              <Image
-                src="/logofinal.png"
-                alt="Diniz Assessoria Contábil"
-                width={1000}
-                height={300}
-                priority
-              />
-            </div>
+            {/* COLUNA ESQUERDA (vazia, imagem é fundo) */}
+            <div />
 
             {/* CONTATO — DIREITA */}
             <div className="md:text-right">
