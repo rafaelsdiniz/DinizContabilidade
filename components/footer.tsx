@@ -17,9 +17,8 @@ export function Footer() {
               <Image
                 src="/logofinal.png"
                 alt="Diniz Assessoria Contábil"
-                width={900}
+                width={1000}
                 height={300}
-                className="h-78 w-auto object-contain"
                 priority
               />
             </div>
