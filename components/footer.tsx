@@ -27,7 +27,7 @@ export function Footer() {
 
               {/* IMAGEM DO TEXTO */}
               <Image
-                src="/TEXTO.png"
+                src="/texto.png"
                 alt="Texto institucional Diniz Assessoria Contábil"
                 width={500}
                 height={150}
