@@ -5,7 +5,6 @@ import { Footer } from "@/components/footer"
 export default function ContatoPage() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main className="pt-20">
         <Contact />
       </main>

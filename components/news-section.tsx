@@ -1,15 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, ExternalLink, Newspaper } from "lucide-react"
+import { Calendar, ExternalLink } from "lucide-react"
 
 interface Article {
   title: string
@@ -44,91 +36,91 @@ export function NewsSection() {
 
   if (loading) {
     return (
-      <section className="py-24 text-center text-foreground/60">
-        Carregando notícias...
+      <section className="py-24 text-center text-muted-foreground">
+        Carregando atualizações...
       </section>
     )
   }
 
   if (articles.length === 0) {
     return (
-      <section className="py-24 text-center text-foreground/60">
-        Nenhuma notícia encontrada no momento.
+      <section className="py-24 text-center text-muted-foreground">
+        Nenhuma atualização disponível no momento.
       </section>
     )
   }
 
   return (
-    <section className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="pt-6 pb-28 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
 
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-4 font-medium">
-            <Newspaper className="w-4 h-4" />
-            Notícias Contábeis
-          </span>
+        {/* CABEÇALHO */}
+        <div className="max-w-3xl mb-20">
+          <div className="flex items-center gap-6 mb-6">
+            <span className="h-px w-16 bg-border" />
+            <span className="text-sm tracking-widest text-muted-foreground">
+              NOTÍCIAS
+            </span>
+          </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Atualizações fiscais e tributárias
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold tracking-wide text-foreground mb-6">
+            Atualizações fiscais e
+            <br />
+            tributárias relevantes
           </h2>
 
-          <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Fique por dentro das principais mudanças na legislação, impostos,
-            obrigações fiscais e decisões relevantes para empresas.
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Acompanhe mudanças na legislação, decisões fiscais e informações
+            importantes que impactam empresas e profissionais.
           </p>
         </div>
 
-        {/* GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* LISTA DE NOTÍCIAS */}
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
           {articles.map((article, index) => (
             <a
               key={index}
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group"
+              className="group flex gap-6"
             >
-              <Card className="h-full border border-border/60 shadow-sm hover:shadow-lg transition">
-                
-                {/* IMAGEM */}
-                <div className="h-48 w-full overflow-hidden rounded-t-lg bg-muted">
-                  <img
-                    src={article.urlToImage}
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      e.currentTarget.src = "/images/news-placeholder.jpg"
-                    }}
-                  />
+              {/* IMAGEM */}
+              <div className="w-40 h-28 flex-shrink-0 bg-muted overflow-hidden rounded-md">
+                <img
+                  src={article.urlToImage || "/images/news-placeholder.jpg"}
+                  alt={article.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  onError={(e) => {
+                    e.currentTarget.src = "/images/news-placeholder.jpg"
+                  }}
+                />
+              </div>
+
+              {/* TEXTO */}
+              <div className="flex flex-col">
+                <span className="text-sm text-muted-foreground mb-1">
+                  {article.source.name}
+                </span>
+
+                <h3 className="text-lg font-semibold text-foreground leading-snug mb-2">
+                  {article.title}
+                </h3>
+
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                  <Calendar className="w-4 h-4" />
+                  {formatDate(article.publishedAt)}
                 </div>
 
-                <CardHeader className="space-y-2">
-                  <Badge variant="secondary" className="w-fit text-xs">
-                    {article.source.name}
-                  </Badge>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  {article.description}
+                </p>
 
-                  <CardTitle className="text-lg leading-snug line-clamp-2">
-                    {article.title}
-                  </CardTitle>
-
-                  <CardDescription className="flex items-center gap-2 text-sm">
-                    <Calendar className="w-4 h-4" />
-                    {formatDate(article.publishedAt)}
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent>
-                  <p className="text-sm text-foreground/70 line-clamp-3 mb-6">
-                    {article.description}
-                  </p>
-
-                  <span className="inline-flex items-center gap-2 text-primary text-sm font-medium">
-                    Ler notícia completa
-                    <ExternalLink className="w-4 h-4" />
-                  </span>
-                </CardContent>
-              </Card>
+                <span className="mt-3 inline-flex items-center gap-2 text-sm text-primary font-medium">
+                  Ler artigo completo
+                  <ExternalLink className="w-4 h-4" />
+                </span>
+              </div>
             </a>
           ))}
         </div>

@@ -3,81 +3,89 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================= */
+/* 🎨 CORES – DINIZ CONTABILIDADE */
+/* Base branca institucional     */
+/* ============================= */
+
 :root {
-  /* Updated color scheme based on Diniz logo - navy blue and warm tan/beige */
-  --background: oklch(0.96 0.015 75);
-  --foreground: oklch(0.18 0.04 255);
-  --card: oklch(0.98 0.01 75);
-  --card-foreground: oklch(0.18 0.04 255);
-  --popover: oklch(0.98 0.01 75);
-  --popover-foreground: oklch(0.18 0.04 255);
+  /* Fundo e texto */
+  --background: oklch(1 0 0);                 /* branco puro */
+  --foreground: oklch(0.16 0.02 255);         /* quase preto */
+
+  /* Superfícies */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.02 255);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.02 255);
+
+  /* Azul institucional */
   --primary: oklch(0.22 0.06 255);
-  --primary-foreground: oklch(0.98 0.01 75);
-  --secondary: oklch(0.88 0.03 75);
-  --secondary-foreground: oklch(0.18 0.04 255);
-  --muted: oklch(0.92 0.02 75);
-  --muted-foreground: oklch(0.48 0.03 255);
-  --accent: oklch(0.94 0.02 75);
-  --accent-foreground: oklch(0.18 0.04 255);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Cinzas de apoio */
+  --secondary: oklch(0.97 0.01 255);
+  --secondary-foreground: oklch(0.16 0.02 255);
+
+  --muted: oklch(0.96 0.01 255);
+  --muted-foreground: oklch(0.45 0.02 255);
+
+  --accent: oklch(0.97 0.01 255);
+  --accent-foreground: oklch(0.16 0.02 255);
+
+  /* Estados */
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0.01 75);
-  --border: oklch(0.88 0.02 75);
-  --input: oklch(0.88 0.02 75);
+  --destructive-foreground: oklch(1 0 0);
+
+  /* Bordas e foco */
+  --border: oklch(0.9 0.01 255);
+  --input: oklch(0.9 0.01 255);
   --ring: oklch(0.22 0.06 255);
-  --chart-1: oklch(0.22 0.06 255);
-  --chart-2: oklch(0.88 0.03 75);
-  --chart-3: oklch(0.48 0.03 255);
-  --chart-4: oklch(0.68 0.04 255);
-  --chart-5: oklch(0.78 0.03 75);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.98 0.01 75);
-  --sidebar-foreground: oklch(0.18 0.04 255);
-  --sidebar-primary: oklch(0.22 0.06 255);
-  --sidebar-primary-foreground: oklch(0.98 0.01 75);
-  --sidebar-accent: oklch(0.94 0.02 75);
-  --sidebar-accent-foreground: oklch(0.18 0.04 255);
-  --sidebar-border: oklch(0.88 0.02 75);
-  --sidebar-ring: oklch(0.22 0.06 255);
+
+  /* Raio */
+  --radius: 0.75rem;
 }
+
+/* ============================= */
+/* 🌙 DARK MODE (ELEGANTE)       */
+/* ============================= */
 
 .dark {
-  --background: oklch(0.18 0.04 255);
-  --foreground: oklch(0.96 0.015 75);
-  --card: oklch(0.22 0.05 255);
-  --card-foreground: oklch(0.96 0.015 75);
-  --popover: oklch(0.22 0.05 255);
-  --popover-foreground: oklch(0.96 0.015 75);
-  --primary: oklch(0.88 0.03 75);
-  --primary-foreground: oklch(0.18 0.04 255);
-  --secondary: oklch(0.28 0.05 255);
-  --secondary-foreground: oklch(0.96 0.015 75);
-  --muted: oklch(0.28 0.05 255);
-  --muted-foreground: oklch(0.68 0.02 75);
-  --accent: oklch(0.28 0.05 255);
-  --accent-foreground: oklch(0.96 0.015 75);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.96 0.015 75);
-  --border: oklch(0.28 0.05 255);
-  --input: oklch(0.28 0.05 255);
-  --ring: oklch(0.88 0.03 75);
-  --chart-1: oklch(0.88 0.03 75);
-  --chart-2: oklch(0.22 0.06 255);
-  --chart-3: oklch(0.68 0.04 255);
-  --chart-4: oklch(0.48 0.03 255);
-  --chart-5: oklch(0.78 0.03 75);
-  --sidebar: oklch(0.22 0.05 255);
-  --sidebar-foreground: oklch(0.96 0.015 75);
-  --sidebar-primary: oklch(0.88 0.03 75);
-  --sidebar-primary-foreground: oklch(0.18 0.04 255);
-  --sidebar-accent: oklch(0.28 0.05 255);
-  --sidebar-accent-foreground: oklch(0.96 0.015 75);
-  --sidebar-border: oklch(0.28 0.05 255);
-  --sidebar-ring: oklch(0.88 0.03 75);
+  --background: oklch(0.15 0.02 255);
+  --foreground: oklch(0.96 0.01 255);
+
+  --card: oklch(0.18 0.03 255);
+  --card-foreground: oklch(0.96 0.01 255);
+
+  --popover: oklch(0.18 0.03 255);
+  --popover-foreground: oklch(0.96 0.01 255);
+
+  --primary: oklch(0.88 0.03 255);
+  --primary-foreground: oklch(0.15 0.02 255);
+
+  --secondary: oklch(0.22 0.03 255);
+  --secondary-foreground: oklch(0.96 0.01 255);
+
+  --muted: oklch(0.22 0.03 255);
+  --muted-foreground: oklch(0.7 0.02 255);
+
+  --accent: oklch(0.22 0.03 255);
+  --accent-foreground: oklch(0.96 0.01 255);
+
+  --border: oklch(0.25 0.03 255);
+  --input: oklch(0.25 0.03 255);
+  --ring: oklch(0.88 0.03 255);
 }
 
+/* ============================= */
+/* 🧠 TEMA / TIPOGRAFIA          */
+/* ============================= */
+
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -97,35 +105,66 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
 }
+
+/* ============================= */
+/* ✨ BASE – FORMAL E CLÁSSICO   */
+/* ============================= */
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  *,
+  *::before,
+  *::after {
+    @apply border-border outline-ring/40;
+    box-sizing: border-box;
   }
+
+  html,
   body {
-    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    letter-spacing: 0.015em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    line-height: 1.75;
+    font-weight: 300;
   }
 }
 
-/* Estilos para o Leaflet map */
+
+/* ============================= */
+/* 🗺️ LEAFLET MAP               */
+/* ============================= */
+
 .leaflet-container {
   @apply rounded-lg;
+}
+/* Remove scrollbar horizontal (cross-browser) */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE e Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
 }
