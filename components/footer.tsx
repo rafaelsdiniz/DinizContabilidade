@@ -12,26 +12,15 @@ export function Footer() {
           {/* CONTEÚDO PRINCIPAL */}
           <div className="grid md:grid-cols-2 gap-12 mb-10">
 
-            {/* LOGO + IMAGEM TEXTO */}
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-start">
-
-              {/* LOGO */}
+            {/* LOGO COMPLETA */}
+            <div className="flex items-start">
               <Image
-                src="/15ANOS.png"
+                src="/logocompleta.png"
                 alt="Diniz Assessoria Contábil"
-                width={500}
-                height={150}
-                className="h-40 w-auto"
+                width={700}
+                height={200}
+                className="h-60 w-auto object-contain"
                 priority
-              />
-
-              {/* IMAGEM DO TEXTO */}
-              <Image
-                src="/texto.png"
-                alt="Texto institucional Diniz Assessoria Contábil"
-                width={500}
-                height={150}
-                className="h-40 w-auto"
               />
             </div>
 
