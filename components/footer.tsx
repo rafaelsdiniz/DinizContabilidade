@@ -12,45 +12,27 @@ export function Footer() {
           {/* CONTEÚDO PRINCIPAL */}
           <div className="grid md:grid-cols-2 gap-12 mb-10">
 
-            {/* LOGO + DESCRIÇÃO */}
-            <div>
-              <div className="mb-6 inline-block">
-                <Image
-                  src="/DINIZ15ANOS.png"
-                  alt="Diniz Assessoria Contábil"
-                  width={200}
-                  height={70}
-                  className="h-15 w-auto"
-                />
-              </div>
+            {/* LOGO + IMAGEM TEXTO */}
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-start">
 
-              <p className="text-primary-foreground/80 leading-relaxed max-w-md">
-                Há mais de 15 anos oferecendo soluções contábeis seguras,
-                estratégicas e alinhadas às necessidades de empresas e
-                profissionais.
-              </p>
+              {/* LOGO */}
+              <Image
+                src="/logo.png"
+                alt="Diniz Assessoria Contábil"
+                width={500}
+                height={150}
+                className="h-30 w-auto"
+                priority
+              />
 
-              <div className="flex gap-3 mt-6">
-                <a
-                  href="https://www.facebook.com/dinizassessoriacontabil/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-
-                <a
-                  href="https://www.instagram.com/diniz.contabil/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-              </div>
+              {/* IMAGEM DO TEXTO */}
+              <Image
+                src="/texto.png"
+                alt="Texto institucional Diniz Assessoria Contábil"
+                width={500}
+                height={150}
+                className="h-30 w-auto"
+              />
             </div>
 
             {/* CONTATO */}
@@ -62,7 +44,10 @@ export function Footer() {
               <ul className="space-y-4 text-primary-foreground/80">
                 <li className="flex items-start gap-3">
                   <Phone size={16} className="mt-1 flex-shrink-0" />
-                  <a href="tel:+556333227900" className="hover:text-primary-foreground transition">
+                  <a
+                    href="tel:+556333227900"
+                    className="hover:text-primary-foreground transition"
+                  >
                     (63) 3322-7900
                   </a>
                 </li>
@@ -84,6 +69,29 @@ export function Footer() {
                   </span>
                 </li>
               </ul>
+
+              {/* REDES SOCIAIS */}
+              <div className="flex gap-3 mt-6">
+                <a
+                  href="https://www.facebook.com/dinizassessoriacontabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/diniz.contabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+              </div>
             </div>
 
           </div>
